@@ -4,4 +4,6 @@ date: 2014-08-31
 tags: code-mirror, core-ajax, core-drawer-panel, core-header-panel, core-icon, core-media-query, core-selection, core-selector, core-signals, core-toolbar, core-tooltip, divshot-env, paper-button, paper-icon-button, paper-item, paper-ripple, polymer-flex-layout, polymer-ui-splitter, pvc-globals
 ---
 
+[![Ele.io](screenshots/ele.png)](https://ele.io)
+
 Ele.io is a live code editor for writing and sharing Polymer elements. The app takes advantage of paper elements showcasing Google's new material design and the `<code-mirror>` component for code editing.
