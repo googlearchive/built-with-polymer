@@ -1,0 +1,36 @@
+---
+pageable: true
+per_page: 10
+---
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+<div class="post">
+  <div layout center horizontal class="title">
+    <h1 flex><%= link_to article.title, article %></h1>
+    <span class="date"><%= article.date.strftime("%B #{article.date.day.ordinalize}") %></span>
+  </div>
+  <div class="description"><%= article.body %></div>
+  <div class="elements">
+    <ul>
+    <% tags = article.tags.take(10) %>
+    <% tags.each do |tag| %>
+      <li><%= link_to "#{tag}", tag_path(tag) %></li>
+    <% end %>
+      <% if article.tags.size > 10 %><li><%= link_to "and <b>#{article.tags.size - 10}</b> more custom elements...", article %></li><% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

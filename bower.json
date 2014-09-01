@@ -1,0 +1,11 @@
+{
+  "name": "polymer-built",
+  "version": "0.0.1",
+  "dependencies": {
+    "platform": "Polymer/platform#master",
+    "polymer": "Polymer/polymer#master",
+    "core-scroll-header-panel": "Polymer/core-header-panel#~0.4",
+    "core-toolbar": "Polymer/core-toolbar#~0.4"
+  },
+  "devDependencies": {}
+}

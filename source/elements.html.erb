@@ -1,0 +1,5 @@
+<h1>Elements</h1>
+
+<% blog.tags.each do |tag, articles| %>
+  <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+<% end %>
