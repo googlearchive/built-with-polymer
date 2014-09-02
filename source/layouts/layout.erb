@@ -25,9 +25,9 @@
           <div flex>
             <nav>
               <ul>
-                <li><a href="/elements">Browse</a></li>
+                <li><%= link_to 'Browse', '/elements.html' %></li>
                 <li><a href="http://polymer-project.org">Learn</a></li>
-                <li><a href="/submit">Submit</a></li>
+                <li><%= link_to 'Submit', '/submit.html' %></li>
               </ul>
             </nav>
           </div>
@@ -77,11 +77,20 @@
           </aside>
         </div>
         <footer>
-          <p>&copy; <%= Time.now.year %> Built with Polymer &bull; Curated by <a href="http://twitter.com/jakejohnson">Jake Johnson</a> &bull; Hosted by <a href="http://www.divshot.com" title="Static Web Hosting for Developers">Divshot</a>.</p>
+          <p>&copy; <%= Time.now.year %> Built with Polymer &bull; Curated by <a href="http://twitter.com/jakejohnson">Jake Johnson</a> &bull; Hosted by <a href="http://www.divshot.com" title="Static Web Hosting for Developers">Divshot</a></p>
         </footer>
       </div>
 
     </core-scroll-header-panel>
+    <script type="text/javascript">
+      var disqus_shortname = 'builtwithpolymer';
+      (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
     <%= javascript_include_tag  "lander" %>
   </body>
 </html>
