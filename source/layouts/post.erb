@@ -1,6 +1,15 @@
 <% wrap_layout :layout do %>
   <article>
     <h1><%= link_to current_article.title, current_article.data.url %></h1>
-    <%= yield %>
+    <%= yield %><br>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'builtwithpolymer';
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
   </article>
 <% end %>
