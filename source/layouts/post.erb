@@ -1,0 +1,6 @@
+<% wrap_layout :layout do %>
+  <article>
+    <h1><%= link_to current_article.title, current_article.data.url %></h1>
+    <%= yield %>
+  </article>
+<% end %>

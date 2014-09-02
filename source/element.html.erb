@@ -1,16 +1,9 @@
 ---
 pageable: true
-per_page: 12
+per_page: 10
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
-
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+<h1>Sites Using &lt;<%= tagname %>&gt;</h1>
+<p>A collection of Polymer web apps and websites using &lt;<%= tagname %>&gt;.</p>
 
 <ul>
   <% page_articles.each_with_index do |article, i| %>

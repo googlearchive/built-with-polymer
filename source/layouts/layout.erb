@@ -8,12 +8,12 @@
 
     <%= stylesheet_link_tag "normalize", "lander" %>
     <%= javascript_include_tag "bower_components/platform/platform" %>
-    <link rel="import" href="bower_components/core-scroll-header-panel/core-header-panel.html">
-    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="/bower_components/core-scroll-header-panel/core-header-panel.html">
+    <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700">
   </head>
   
-  <body fullbleed layout vertical class="<%= page_classes %>">
+  <body fullbleed layout vertical>
     <div id="top-border"></div>
     <core-scroll-header-panel flex>
 
@@ -82,6 +82,6 @@
       </div>
 
     </core-scroll-header-panel>
-    <%= javascript_include_tag  "all" %>
+    <%= javascript_include_tag  "lander" %>
   </body>
 </html>
