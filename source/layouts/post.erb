@@ -1,7 +1,17 @@
 <% wrap_layout :layout do %>
   <article>
-    <h1><%= link_to current_article.title, current_article.data.url %></h1>
-    <%= yield %><br>
+    <div layout center horizontal class="title">
+      <h1 flex><%= link_to current_article.title, current_article.data.url %></h1>
+      <span class="date"><%= current_article.date.strftime("%B #{current_article.date.day.ordinalize}") %></span>
+    </div>
+    <%= yield %>
+    <div class="elements">
+      <ul>
+      <% current_article.tags.each do |tag| %>
+        <li><%= link_to "#{tag}", tag_path(tag) %></li>
+      <% end %>
+      </ul>
+    </div><br>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_shortname = 'builtwithpolymer';
