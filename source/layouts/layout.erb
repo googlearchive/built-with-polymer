@@ -33,7 +33,7 @@
             </nav>
           </div>
           <div>
-            <ui-search json="/entries.json" placeholder="Search Polymer Projects"></ui-search>
+            <ui-search json="/entries.json"></ui-search>
           </div>
         </div>
       </core-toolbar>
@@ -50,7 +50,7 @@
             <section>
               <h3>Welcome</h3>
               <p>Built with Polymer is a curated collection of web apps and websites using Polymer.</p>
-              <p><a href="#">What's Polymer?</a></p>
+              <p><a href="https://www.polymer-project.org/docs/start/everything.html" target="_blank">What's Polymer?</a></p>
             </section>
             <section>
               <h3>Newsletter</h3>
@@ -60,7 +60,7 @@
               </form>
             </section>
             <section>
-              <h3>Chrome Extension</h3>
+              <h3><%= image_tag 'chrome.svg', :width => 20, :style => "float: left; margin: 0 8px 0 0" %> Extension</h3>
               <p>See what it's built with. Use the <a href="https://chrome.google.com/webstore/detail/aaifiopbmiecbpladpjaoemohhfjcbdk/" target="_blank">Polymer Ready</a> extension by François Beaufort.</p>
             </section>
             <section>

@@ -72,6 +72,7 @@ input, textarea, * /deep/ input
   font-size: 13px
   border: 1px solid #ccc
   border-radius: 3px
+  margin: 0
   padding: 4px
   outline: none
   &:focus
@@ -85,6 +86,8 @@ button[type="submit"], * /deep/ button[type="submit"]
   color: #fff
   border: 0
   border-radius: 3px
+  &:hover
+    background: #DF3871
 
 .submit-form 
   .field
@@ -195,6 +198,8 @@ ui-search-results
 #main + aside
   max-width: 280px
   padding: 20px 0
+  @media (max-width: 768px)
+    display: none
   section
     font-size: 13px
     line-height: 23px
