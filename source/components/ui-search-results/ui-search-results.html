@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-signals/core-signals.html">
+
+<polymer-element name="ui-search-results">
+
+  <template>
+    <style>
+      h1 {
+        margin: 0 0 40px;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+
+    <core-signals on-core-signal-search="{{searchSignal}}"></core-signals>
+
+    <h1>Search Results for "{{query}}"</h1>
+
+    <template repeat="{{post in results}}">
+      <div class="post">
+        <div layout center horizontal class="title">
+          <h2 flex><a href="{{post.url}}" target="_blank">{{post.title}}</a></h2>
+          <span class="date">{{post.date}}</span>
+        </div>
+        <div class="description">{{post.content}}</div>
+      </div>
+    </template>
+
+    <template if="{{!results.length}}">
+      <p>No results were found.</p>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+      searchSignal: function(event, response) {
+        var content = document.querySelector('#content');
+        this.query = response.query;
+        this.results = response.results;
+
+        if (this.query.length) {
+          content.style.display = 'none';
+          this.style.display = 'block';
+        } else {
+          content.style.display = 'block';
+          this.style.display = 'none';
+        }
+      }
+    });
+  </script>
+
+</polymer-element>

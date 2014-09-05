@@ -5,7 +5,10 @@
     "platform": "Polymer/platform#master",
     "polymer": "Polymer/polymer#master",
     "core-scroll-header-panel": "Polymer/core-header-panel#~0.4",
-    "core-toolbar": "Polymer/core-toolbar#~0.4"
+    "core-toolbar": "Polymer/core-toolbar#~0.4",
+    "lodash": "~2.4.1",
+    "core-ajax": "Polymer/core-ajax#~0.4.0",
+    "core-signals": "Polymer/core-signals#~0.4.0"
   },
   "devDependencies": {}
 }

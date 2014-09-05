@@ -5,11 +5,12 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>Built with Polymer<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-
     <%= stylesheet_link_tag "normalize", "lander" %>
     <%= javascript_include_tag "bower_components/platform/platform" %>
     <link rel="import" href="/bower_components/core-scroll-header-panel/core-header-panel.html">
     <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="/components/ui-search/ui-search.html">
+    <link rel="import" href="/components/ui-search-results/ui-search-results.html">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700">
   </head>
   
@@ -32,9 +33,7 @@
             </nav>
           </div>
           <div>
-            <form action="/search" method="post">
-              <input type="search" name="q" placeholder="Search Polymer Projects">
-            </form>
+            <ui-search json="/entries.json" placeholder="Search Polymer Projects"></ui-search>
           </div>
         </div>
       </core-toolbar>
@@ -45,6 +44,7 @@
             <div id="content">
               <%= yield %>
             </div>
+            <ui-search-results></ui-search-results>
           </div>
           <aside>
             <section>
@@ -91,6 +91,6 @@
       (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       }());
     </script>
-    <%= javascript_include_tag  "lander" %>
+    <%= javascript_include_tag "lander" %>
   </body>
 </html>

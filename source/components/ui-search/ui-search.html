@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="../../bower_components/core-signals/core-signals.html">
+<script src="../../bower_components/lodash/dist/lodash.min.js"></script>
+
+<polymer-element name="ui-search" attributes="id name placeholder json">
+
+  <template>
+    <core-ajax auto url="{{json}}" handleAs="json" on-core-response="{{handleResults}}"></core-ajax>
+
+    <form action="/search" method="post">
+      <input id="{{id}}" type="search" name="{{name}}" placeholder="{{placeholder}}" on-keyup="{{keyupHandler}}">
+    </form>
+  </template>
+
+  <script>
+    Polymer({
+      id: 'search',
+      name: 'q',
+      json: '/entries.json',
+      placeholder: 'Search...',
+
+      handleResults: function(event, data) {
+        this.posts = data.response;
+      },
+
+      keyupHandler: function(event, detail, sender) {
+        if(event.which === 27) sender.value = '';
+        var results = _.filter(this.posts, function(post) {
+          return _.contains(post.title, sender.value) || _.contains(post.content, sender.value) || _.contains(post.tags, sender.value);
+        });
+        this.fire('core-signal', { name: 'search', data: { query: sender.value, results: results } });
+      }
+    });
+  </script>
+
+</polymer-element>

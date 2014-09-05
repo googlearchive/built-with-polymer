@@ -1,0 +1,14 @@
+<%
+entries = []
+blog.articles.each do |article|
+  entry = {
+    :title => article.title,
+    :date => article.date.strftime("%B #{article.date.day.ordinalize}"),
+    :url => article.data.url,
+    :commentsUrl => article.url,
+    :content => article.body,
+    :tags => article.tags
+  }
+  entries << entry
+end
+%><%=entries.to_json %>

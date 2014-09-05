@@ -87,6 +87,7 @@ set :images_dir, 'images'
 # activate :directory_indexes
 
 sprockets.append_path 'bower_components'
+sprockets.append_path 'components'
 
 # Build-specific configuration
 configure :build do
