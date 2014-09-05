@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/core-signals/core-signals.html">
+<link rel="import" href="../../bower_components/juicy-html/juicy-html.html">
 
 <polymer-element name="ui-search-results">
 
@@ -23,7 +24,7 @@
           <h2 flex><a href="{{post.url}}" target="_blank">{{post.title}}</a></h2>
           <span class="date">{{post.date}}</span>
         </div>
-        <div class="description">{{post.content}}</div>
+        <div class="description"><template is="juicy-html" content="{{post.content}}"></template></div>
       </div>
     </template>
 
