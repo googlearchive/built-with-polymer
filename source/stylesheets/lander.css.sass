@@ -68,7 +68,7 @@ nav
       &:hover
         color: #FF4081
 
-input, textarea
+input, textarea, * /deep/ input
   font-size: 13px
   border: 1px solid #ccc
   border-radius: 3px
@@ -76,6 +76,31 @@ input, textarea
   outline: none
   &:focus
     border-color: #FF4081
+
+button[type="submit"], * /deep/ button[type="submit"]
+  font-size: 13px
+  font-weight: 600
+  padding: 8px 16px
+  background: #FF4081
+  color: #fff
+  border: 0
+  border-radius: 3px
+
+.submit-form 
+  .field
+    margin: 0 0 20px
+  label
+    display: block
+    font-size: 11px
+    color: #666
+    text-transform: uppercase
+    + input
+      width: 100%
+      max-width: 400px
+  textarea
+    width: 100%
+    max-width: 400px
+    height: 100px
 
 div[content]
   background: rgba(255,255,255,.98)
@@ -167,7 +192,7 @@ ui-search-results
       font-weight: 400
       color: #999
       text-transform: uppercase
-    form
+    form, * /deep/ form
       margin-bottom: 13px
   ul
     margin: 0
