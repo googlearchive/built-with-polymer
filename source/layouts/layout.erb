@@ -29,6 +29,8 @@
                 <li><%= link_to 'Browse', '/elements.html' %></li>
                 <li><a href="http://polymer-project.org">Learn</a></li>
                 <li><%= link_to 'Submit', '/submit.html' %></li>
+                <li><iframe id="star-button" src="http://ghbtns.com/github-btn.html?user=divshot&repo=built-with-polymer&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></li>
               </ul>
             </nav>
           </div>
@@ -62,6 +64,10 @@
             <section>
               <h3><%= image_tag 'chrome.svg', :width => 20, :style => "float: left; margin: 0 8px 0 0" %> Extension</h3>
               <p>See what it's built with. Use the <a href="https://chrome.google.com/webstore/detail/aaifiopbmiecbpladpjaoemohhfjcbdk/" target="_blank">Polymer Ready</a> extension by François Beaufort.</p>
+            </section>
+            <section>
+              <h3><%= image_tag 'github.svg', :width => 20, :style => "float: left; margin: 0 8px 0 0" %> Open Source</h3>
+              <p>Built with Polymer is open source on <a href="https://www.github.com/divshot/built-with-polymer" target="_blank">GitHub</a>. Send a pull request to share your project or <%= link_to 'use our submit form.', '/submit.html' %></p>
             </section>
             <section>
               <h3>Popular Elements</h3>
