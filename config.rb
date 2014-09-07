@@ -84,7 +84,9 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-# activate :directory_indexes
+activate :directory_indexes
+page "/bower_components/**", :directory_index => false
+page "/components/**", :directory_index => false
 
 sprockets.append_path 'bower_components'
 sprockets.append_path 'components'
