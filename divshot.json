@@ -1,5 +1,5 @@
 {
-  "name": "built-with-polymer",
+  "name": "builtwithpolymer",
   "root": "./build",
   "clean_urls": true,
   "error_page": "error.html",
