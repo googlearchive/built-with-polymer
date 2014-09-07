@@ -101,7 +101,7 @@ input, textarea, * /deep/ input
   &:focus
     border-color: #FF4081
 
-button[type="submit"], * /deep/ button[type="submit"]
+button[type="submit"], * /deep/ button[type="submit"], .btn
   font-size: 13px
   font-weight: 600
   padding: 8px 16px
@@ -110,6 +110,7 @@ button[type="submit"], * /deep/ button[type="submit"]
   border: 0
   border-radius: 3px
   &:hover
+    color: #fff
     background: #DF3871
 
 .submit-form 
@@ -156,16 +157,10 @@ div[content] > div
     background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.06) 50%,rgba(0,0,0,0) 100%)
   &:last-child:after
     background: none
-  .title
-    @media (max-width: 768px)
-      display: block !important
-  .title h1, .title h2
-    margin: 0 0 10px
-    a
-      color: #333
-      &:hover
-        color: #FF4081
-        border-bottom: 2px solid #fcf0fe
+
+.title
+  @media (max-width: 768px)
+    display: block !important
   .date
     color: #999
   .divider
@@ -173,28 +168,38 @@ div[content] > div
     letter-spacing: 1px
     color: #ccc
     padding-top: 1px
-  .description
-    color: #666
-    font-size: 17px
-    line-height: 27px
-    img
-      max-width: 100%
-      border-radius: 3px
-  .elements
-    font-size: 11px
-    +clearfix
-    ul
-      margin: 0
-      padding: 0
-    li
-      float: left
-      margin: 0 10px 0 0
-      line-height: 20px
-      list-style: none
-      a
-        color: #999
-        &:hover
-          color: #333
+
+.title h1, .title h2
+  margin: 0 0 10px
+  a
+    color: #333
+    &:hover
+      color: #FF4081
+      border-bottom: 2px solid #fcf0fe
+
+.description
+  color: #666
+  font-size: 17px
+  line-height: 27px
+  img
+    max-width: 100%
+    border-radius: 3px
+
+.elements
+  font-size: 11px
+  +clearfix
+  ul
+    margin: 0
+    padding: 0
+  li
+    float: left
+    margin: 0 10px 0 0
+    line-height: 20px
+    list-style: none
+    a
+      color: #999
+      &:hover
+        color: #333
 
 .pagination
   a
@@ -212,6 +217,13 @@ article
   img
     max-width: 100%
     border-radius: 3px
+
+.view-website
+  margin: 20px 0
+  .btn
+    @media (max-width: 768px)
+      display: block !important
+      text-align: center
 
 ui-search-results
   display: none
