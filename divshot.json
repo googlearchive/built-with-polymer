@@ -1,0 +1,16 @@
+{
+  "name": "built-with-polymer",
+  "root": "./build",
+  "clean_urls": true,
+  "error_page": "error.html",
+  "forms": {
+    "submit": {
+      "subject": "Submission from {{name}}",
+      "from": "{{name}} <{{email}}>",
+      "to": "Built with Polymer <hello@builtwithpolymer.org>",
+      "text": "{{project}}\n{{url}}\n\n{{desc}}",
+      "success": "/submit-success",
+      "failure": "/submit-failure"
+    }
+  }
+}
