@@ -33,6 +33,8 @@ h1, h2, h3, h4, h5, h6
   height: 4px
   background: #fff image_url('polymer.svg') -450px no-repeat
   background-size: 140%
+  @media (max-width: 768px)
+    background-size: 200%
 
 core-toolbar
   background: #fff
@@ -46,15 +48,29 @@ core-toolbar
   padding: 0 20px
   font-size: 13px
 
-.logo
-  font-weight: 300
-  font-size: 16px
-  color: #555
-  &:hover
-    color: #F93E7E
-  img
-    float: right
-    margin: 0 0 0 8px
+#logo
+  @media (max-width: 768px)
+    flex: 1
+  .logo
+    font-weight: 300
+    font-size: 16px
+    color: #555
+    &:hover
+      color: #F93E7E
+    img
+      margin: 0 0 0 4px
+      vertical-align: -6px
+
+#main-menu
+  @media (max-width: 768px)
+    position: absolute
+    width: 100%
+    top: 72px
+    left: 0
+    padding-bottom: 6px
+    border-bottom: 1px solid rgba(0,0,0,.08)
+    nav
+      margin-left: -13px
 
 nav
   ul
@@ -67,6 +83,10 @@ nav
       color: #333
       &:hover
         color: #FF4081
+
+#search
+  @media (max-width: 768px)
+    float: right
 
 #star-button
   vertical-align: -5px
@@ -117,8 +137,11 @@ div[content] > div
 
 #main
   padding: 40px 20px
+  @media (max-width: 768px)
+    padding-top: 80px
   h1
     margin-top: 0
+    line-height: 1.25em
 
 .post, ui-search-results::shadow .post
   margin: 0 0 40px
@@ -133,6 +156,9 @@ div[content] > div
     background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.06) 50%,rgba(0,0,0,0) 100%)
   &:last-child:after
     background: none
+  .title
+    @media (max-width: 768px)
+      display: block !important
   .title h1, .title h2
     margin: 0 0 10px
     a

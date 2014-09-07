@@ -21,10 +21,10 @@
 
       <core-toolbar>
         <div id="masthead" layout horizontal>
-          <div>
+          <div id="logo">
             <a href="/" class="logo">Built with <%= image_tag('polymer2.svg', :width => '36') %></a>
           </div>
-          <div flex>
+          <div id="main-menu" flex>
             <nav>
               <ul>
                 <li><%= link_to 'Browse', '/elements.html' %></li>
@@ -35,7 +35,7 @@
               </ul>
             </nav>
           </div>
-          <div>
+          <div id="search">
             <ui-search json="/entries.json"></ui-search>
           </div>
         </div>
@@ -76,7 +76,7 @@
                 <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
               <% end %>
                 <li class="divider"></li>
-                <li><%= link_to 'View More', '/elements.html' %></li>
+                <li><%= link_to 'View More...', '/elements.html' %></li>
               </ul>
             </section>
           </aside>
