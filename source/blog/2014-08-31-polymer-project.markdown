@@ -2,7 +2,7 @@
 title: Polymer Project
 url: http://www.polymer-project.org
 date: 2014-08-31
-tags: core-collapse, core-icon, core-item, core-media-query, core-menu, core-selection, core-selector, demo-tab, demo-tabs, dropdown-panel, feature-carousel, learn-tabs, paper-button, paper-icon-button, paper-ripple, paper-shadow
+tags: core-collapse, core-icon, core-item, core-media-query, core-menu, core-selection, core-selector, dropdown-panel, feature-carousel, paper-button, paper-icon-button, paper-ripple, paper-shadow
 ---
 
 [![Polymer Project](screenshots/polymer-project.png)](http://www.polymer-project.org)
