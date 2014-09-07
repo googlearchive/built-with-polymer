@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer-jsonp/polymer-jsonp.html">
+<link rel="import" href="../../bower_components/juicy-html/juicy-html.html">
+
+<polymer-element name="mailchimp-subscribe" attributes="url">
+
+  <template>
+    <style>
+      input {
+        width: 100%;
+        margin: 0 0 10px !important;
+        box-sizing: border-box;
+      }
+      .response {
+        font-size: 11px;
+        line-height: 16px;
+      }
+      .response.error {
+        color: red;
+      }
+      .response.success {
+        color: green;
+      }
+    </style>
+
+    <polymer-jsonp id="subscribeRequest" url="{{formattedUrl}}" response="{{subscribeResponse}}"></polymer-jsonp>
+
+    <p class="response {{subscribeResponse.result}}"><template is="juicy-html" content="{{subscribeResponse.msg}}"></template></p>
+
+    <form action="{{url}}" method="post" on-submit="{{submitForm}}">
+      <input type="text" id="email" name="email" placeholder="Email address">
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_b2f916c997005ec8cbb1b1726_0c341f00fc" tabindex="-1" value=""></div>
+      <button type="submit">Subscribe</button>
+    </form>
+
+  </template>
+
+  <script>
+    Polymer({
+      submitForm: function(event) {
+        event.preventDefault();
+
+        if (this.$.email.value.length) {
+          this.$.subscribeRequest.url = this.url.replace('post', 'post-json') + '&EMAIL=' + this.$.email.value + '&c=';
+          this.$.subscribeRequest.go();
+        } else {
+          this.$.email.focus();
+        }
+      }
+    });
+  </script>
+
+</polymer-element>

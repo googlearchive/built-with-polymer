@@ -11,6 +11,7 @@
     <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="/components/ui-search/ui-search.html">
     <link rel="import" href="/components/ui-search-results/ui-search-results.html">
+    <link rel="import" href="/components/mailchimp-subscribe/mailchimp-subscribe.html">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500|Source+Code+Pro:400,500,700">
   </head>
   
@@ -57,9 +58,7 @@
             <section>
               <h3>Newsletter</h3>
               <p>Get web component articles and inspiration delivered straight to your inbox. Sign up for our newsletter:</p>
-              <form action="/signup" method="post">
-                <input type="text" name="email" placeholder="Email address">
-              </form>
+              <mailchimp-subscribe url="http://divshot.us4.list-manage.com/subscribe/post?u=b2f916c997005ec8cbb1b1726&amp;id=0c341f00fc"></mailchimp-subscribe>
             </section>
             <section>
               <h3><%= image_tag 'chrome.svg', :width => 20, :style => "float: left; margin: 0 8px 0 0" %> Extension</h3>

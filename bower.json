@@ -9,7 +9,8 @@
     "lodash": "~2.4.1",
     "core-ajax": "Polymer/core-ajax#~0.4.0",
     "core-signals": "Polymer/core-signals#~0.4.0",
-    "juicy-html": "https://github.com/Juicy/juicy-html.git#~0.0.20140720"
+    "juicy-html": "https://github.com/Juicy/juicy-html.git#~0.0.20140720",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.3.0"
   },
   "devDependencies": {}
 }
