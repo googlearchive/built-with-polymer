@@ -1,9 +1,9 @@
 <h1>Submit Website</h1>
 <p>Build something cool with Polymer and web components? Submit your site and you'll have the chance to appear on Built with Polymer!</p>
 
-<form class="submit-form" action="__/submit" method="post">
+<form class="submit-form" action="/__/forms/submit" method="post">
   <div class="field">
-    <label for="name">Name:</label>
+    <label for="name">Your Name:</label>
     <input type="text" id="name" name="name">
   </div>
   <div class="field">
@@ -11,6 +11,15 @@
     <input type="email" id="email" name="email">
   </div>
   <div class="field">
+    <label for="project">Website Title:</label>
+    <input type="text" id="project" name="project">
+  </div>
+  <div class="field">
+    <label for="url">Website Address (URL):</label>
+    <input type="text" id="url" name="url">
+  </div>
+  <div class="field">
+    <label for="desc">Description:</label>
     <textarea id="desc" name="desc" cols="40" rows="5" placeholder="Provide a short description of your Polymer project and custom elements used."></textarea>
   </div>
   <div class="action">
