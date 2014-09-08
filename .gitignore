@@ -18,3 +18,4 @@
 .DS_Store
 
 /source/bower_components
+.divshot-cache
