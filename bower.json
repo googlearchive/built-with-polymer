@@ -1,5 +1,5 @@
 {
-  "name": "polymer-built",
+  "name": "built-with-polymer",
   "version": "0.0.1",
   "dependencies": {
     "platform": "Polymer/platform#master",
