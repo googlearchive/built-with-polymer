@@ -6,7 +6,8 @@
   "forms": {
     "submit": {
       "subject": "Submission from {{name}}",
-      "from": "{{name}} <{{email}}>",
+      "from": "Built with Polymer <hello@builtwithpolymer.org>",
+      "replyTo": "{{name}} <{{email}}>",
       "to": "Built with Polymer <hello@builtwithpolymer.org>",
       "text": "{{project}}\n{{url}}\n\n{{desc}}",
       "success": "/submit-success",
