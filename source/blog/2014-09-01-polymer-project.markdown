@@ -1,7 +1,7 @@
 ---
 title: Polymer Project
 url: http://www.polymer-project.org
-date: 2014-08-31
+date: 2014-09-01
 tags: core-collapse, core-icon, core-item, core-media-query, core-menu, core-selection, core-selector, dropdown-panel, feature-carousel, paper-button, paper-icon-button, paper-ripple, paper-shadow
 ---
 

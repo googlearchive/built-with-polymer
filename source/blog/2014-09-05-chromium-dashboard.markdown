@@ -1,7 +1,7 @@
 ---
 title: Chromium Dashboard 
 url: http://www.chromestatus.com
-date: 2014-09-04
+date: 2014-09-05
 tags: core-ajax, core-overlay, paper-dialog, paper-shadow
 ---
 
