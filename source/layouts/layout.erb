@@ -6,6 +6,7 @@
     <title>Built with Polymer<%= ' - ' + current_article.title unless current_article.nil? %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <%= favicon_tag "favicon.ico" %>
     <%= stylesheet_link_tag "normalize", "lander" %>
     <%= javascript_include_tag "bower_components/platform/platform" %>
     <link rel="import" href="/bower_components/core-scroll-header-panel/core-header-panel.html">
