@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title>Built with Polymer<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= display_meta_tags site: 'Built with Polymer', separator: '-' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= favicon_tag "favicon.ico" %>

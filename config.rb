@@ -91,6 +91,8 @@ page "/components/**", :directory_index => false
 sprockets.append_path 'bower_components'
 sprockets.append_path 'components'
 
+activate :meta_tags
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment

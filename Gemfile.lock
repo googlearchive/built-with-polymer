@@ -70,6 +70,8 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-meta-tags (0.0.1)
+      middleman-core (>= 3.0.0)
     middleman-sprockets (3.3.9)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
@@ -118,3 +120,4 @@ DEPENDENCIES
   builder (~> 3.0)
   middleman (~> 3.3.5)
   middleman-blog (~> 3.5.3)
+  middleman-meta-tags
