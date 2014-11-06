@@ -7,4 +7,4 @@ tags: core-scaffold, core-ajax, core-menu, core-drawer-panel, core-header-panel,
 
 [![DriveCeption](screenshots/driveception.png)](https://driveception.gweb.io/)
 
-A blog that use Google Docs publish functionality to publish articles. Write an article with Google Docs and publish it, nothing else. The site itself is stored and hosted on Google Drive.
+A blog that uses Google Docs publish functionality to publish articles. Write an article with Google Docs and publish it, nothing else. The site itself is stored and hosted on Google Drive.
