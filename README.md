@@ -19,6 +19,8 @@ tags: core-collapse, core-icon, core-item, core-media-query, core-menu, core-sel
 Write a short description here. For the image above, use [![Image Title](Image URL)](Website URL).
 ```
 
+We're looking for complete apps and websites that use Polymer in a significant way. If you'd like to show off your shiny new web component, head on over to [Custom Elements](http://customelements.io/) and [Component Kitchen](http://component.kitchen/)!
+
 ### Filename
 
 Use the current date for your filename and frontmatter, e.g. `2014-09-10-polymer-project.markdown` and `date: 2014-09-10`. Add the Markdown file inside `/source/blog`.
