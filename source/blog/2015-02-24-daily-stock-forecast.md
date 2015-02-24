@@ -1,7 +1,7 @@
 ---
 title: Daily Stock Forecast
 url: http://1.daily-stock-forecast.appspot.com/
-date: 2015-02-17
+date: 2015-02-24
 tags: core-header-panel, core-toolbar, core-icons, core-icon-button, core-input, device-icons, paper-tabs, paper-menu-button, paper-icon-button, paper-dialog, paper-input, paper-ripple
 ---
 

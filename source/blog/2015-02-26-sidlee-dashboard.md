@@ -1,7 +1,7 @@
 ---
 title: Sid Lee Paris Dashboard
 url: http://dashboard.sidlee.com
-date: 2015-02-20
+date: 2015-02-26
 tags: core-media-query
 ---
 
