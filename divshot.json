@@ -1,7 +1,7 @@
 {
   "name": "builtwithpolymer",
   "root": "./build",
-  "clean_urls": true,
+  "clean_urls": ["/!(bower_components|components)/**"],
   "error_page": "error.html",
   "forms": {
     "submit": {
