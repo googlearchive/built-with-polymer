@@ -2,7 +2,7 @@
 <% wrap_layout :layout do %>
   <article>
     <div class="title horizontal layout center">
-      <h1 flex><%= link_to current_article.title, current_article.data.url %></h1>
+      <h1 class="flex"><%= link_to current_article.title, current_article.data.url %></h1>
       <span class="date"><%= current_article.date.strftime("%B #{current_article.date.day.ordinalize}") %></span>
       <span class="divider">&bull;</span>
       <span class="comments"><%= link_to 'Comments', current_article.url + "#disqus_thread" %></span>
