@@ -30,8 +30,8 @@
 
     <template is="x-repeat" items="[[results]]">
       <div class="post">
-        <div layout center horizontal class="title">
-          <h2 flex><a href="[[item.url]]" target="_blank">[[item.title]]</a></h2>
+        <div class="title horizontal layout center">
+          <h2 class="flex"><a href="[[item.url]]" target="_blank">[[item.title]]</a></h2>
           <span class="date">[[item.date]]</span>
         </div>
         <div class="description"><template is="juicy-html" content="[[item.content]]"></template></div>

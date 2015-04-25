@@ -5,8 +5,8 @@ per_page: 8
 <% set_meta_tags description: "Showcase of web apps and websites using Polymer." %>
 <% page_articles.each_with_index do |article, i| %>
 <div class="post">
-  <div layout center horizontal class="title">
-    <h1 flex><%= link_to article.title, article.data.url, :target => "_blank" %></h1>
+  <div class="title horizontal layout center">
+    <h1 class="flex"><%= link_to article.title, article.data.url, :target => "_blank" %></h1>
     <span class="date"><%= article.date.strftime("%B #{article.date.day.ordinalize}") %></span>
     <span class="divider">&bull;</span>
     <span class="comments"><%= link_to 'Comments', article.url + "#disqus_thread" %></span>
@@ -25,11 +25,11 @@ per_page: 8
 <% end %>
 
 <% if paginate && num_pages > 1 %>
-  <div class="pagination" horizontal layout>
+  <div class="pagination horizontal layout">
     <% if prev_page %>
       <div class="prev"><%= link_to '&laquo; Prev Page', prev_page %></div>
     <% end %>
-    <div flex></div>
+    <div class="flex"></div>
     <% if next_page %>
       <div class="next"><%= link_to 'Next Page &raquo;', next_page %></div>
     <% end %>
