@@ -42,7 +42,7 @@ middleman server
 
 Now you should be able to go to `http://localhost:4567` to see the website locally.
 
-# License
+## License
 
 The MIT License (MIT)
 
