@@ -1,64 +1,68 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/core-signals/core-signals.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<script src="../../bower_components/lodash/dist/lodash.min.js"></script>
 <link rel="import" href="../../bower_components/juicy-html/juicy-html.html">
 
-<polymer-element name="ui-search-results">
+<dom-module id="ui-search-results">
+  <style>
+    h1 {
+      margin: 0 0 40px;
+    }
+    a {
+      text-decoration: none;
+    }
+    h2 a {
+      color: #333;
+    }
+    h2 a:hover {
+      color: #FF4081;
+      border-bottom: 2px solid #fcf0fe;
+    }
+    img {
+      width: 100%;
+    }
+  </style>
 
   <template>
-    <style>
-      h1 {
-        margin: 0 0 40px;
-      }
-      a {
-        text-decoration: none;
-      }
-      h2 a {
-        color: #333;
-      }
-      h2 a:hover {
-        color: #FF4081;
-        border-bottom: 2px solid #fcf0fe;
-      }
-      img {
-        width: 100%;
-      }
-    </style>
+    <iron-ajax auto url="{{json}}" handleAs="json" on-response="handleResults"></iron-ajax>
 
-    <core-signals on-core-signal-search="{{searchSignal}}"></core-signals>
+    <h1>Search Results for "<span>[[query]]</span>"</h1>
 
-    <h1>Search Results for "{{query}}"</h1>
-
-    <template repeat="{{post in results}}">
+    <template is="x-repeat" items="[[results]]">
       <div class="post">
-        <div layout center horizontal class="title">
-          <h2 flex><a href="{{post.url}}" target="_blank">{{post.title}}</a></h2>
-          <span class="date">{{post.date}}</span>
+        <div class="title horizontal layout center">
+          <h2 class="flex"><a href="[[item.url]]" target="_blank">[[item.title]]</a></h2>
+          <span class="date">[[item.date]]</span>
         </div>
-        <div class="description"><template is="juicy-html" content="{{post.content}}"></template></div>
+        <div class="description"><template is="juicy-html" content="[[item.content]]"></template></div>
       </div>
     </template>
 
-    <template if="{{!results.length}}">
-      <p>No results were found.</p>
-    </template>
+    <p hidden$="[[foundResults(results)]]">No results were found.</p>
   </template>
 
   <script>
     Polymer({
-      searchSignal: function(event, response) {
-        var content = document.querySelector('#content');
-        this.query = response.query;
-        this.results = response.results;
-
-        if (this.query.length) {
-          content.style.display = 'none';
-          this.style.display = 'block';
-        } else {
-          content.style.display = 'block';
-          this.style.display = 'none';
-        }
+      is: 'ui-search-results',
+      properties: {
+        json: { type: String, value: '/entries.json' },
+        query: { type: String, observer: '_handleQuery', computed: '_formatQuery(query)' },
+        results: { type: Array }
+      },
+      handleResults: function(event) {
+        this.posts = event.detail;
+      },
+      foundResults: function(results) {
+        return Boolean(results.length);
+      },
+      _formatQuery: function(query) {
+        return query.toLowerCase();
+      },
+      _handleQuery: function() {
+        this.results = _.filter(this.posts, function(post) {
+          return _.contains(post.title.toLowerCase(), this.query) || _.contains(post.content.toLowerCase(), this.query) || _.contains(post.tags, this.query);
+        }.bind(this));
       }
     });
   </script>
-
-</polymer-element>
+</dom-module>

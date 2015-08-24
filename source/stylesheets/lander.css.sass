@@ -36,8 +36,11 @@ h1, h2, h3, h4, h5, h6
   @media (max-width: 768px)
     background-size: 200%
 
-core-toolbar
-  background: #fff
+paper-header-panel /deep/ #topBar
+  padding: 0
+
+paper-toolbar
+  background: #fff !important
   border-bottom: 1px solid rgba(0,0,0,.08)
   // box-shadow: 0 0 4px rgba(0,0,0,.08)
 
@@ -134,10 +137,10 @@ button[type="submit"], * /deep/ button[type="submit"], .btn
     max-width: 400px
     height: 100px
 
-div[content]
+.content
   background: rgba(255,255,255,.98)
 
-div[content] > div
+.content > div
   max-width: 960px
   margin: 0 auto
 
@@ -230,9 +233,6 @@ article
     @media (max-width: 768px)
       display: block !important
       text-align: center
-
-ui-search-results
-  display: none
 
 .post-list
   margin: 0
