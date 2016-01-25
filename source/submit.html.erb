@@ -4,18 +4,19 @@
 <p>Build something cool with Polymer and web components? Submit your site and you'll have the chance to appear on Built with Polymer!</p>
 <p>We're looking for complete apps and websites that use Polymer in a significant way. If you'd like to show off your shiny new web component, head on over to <a href="http://customelements.io/">Custom Elements</a> and <a href="http://component.kitchen/">Component Kitchen</a>.</p>
 
-<form class="submit-form" action="/__/forms/submit" method="post">
+<form class="submit-form" action="http://formspree.io/builtwithpolymer-submissions@googlegroups.com" method="post">
+  <input type="hidden" name="_next" value="https://builtwithpolymer.org/submit-success/">
   <div class="field">
     <label for="name">Your Name:</label>
     <input type="text" id="name" name="name">
   </div>
   <div class="field">
     <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email">
+    <input type="email" id="email" name="_replyto">
   </div>
   <div class="field">
     <label for="project">Website Title:</label>
-    <input type="text" id="project" name="project">
+    <input type="text" id="project" name="_subject">
   </div>
   <div class="field">
     <label for="url">Website Address (URL):</label>
@@ -28,4 +29,5 @@
   <div class="action">
     <button type="submit">Submit</button>
   </div>
+  <input type="text" name="_gotcha">
 </form>
